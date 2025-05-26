@@ -30,17 +30,15 @@ document.getElementById('auth-form').addEventListener('submit', function(event) 
         alert('Обязательные поля должны быть заполнены!');
         break;
       }
-
-      if(prop === 'email' && !String(payload[prop])
+    }
+      
+    if(doFetch && 
+      !String(payload['email'])
         .toLowerCase()
-        .match(
-          /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-        )
-      ){
-        doFetch = false;
-        alert('Электронная почта введена некорректно');
-        break;
-      }
+        .match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)
+    ){
+      doFetch = false;
+      alert('Электронная почта введена некорректно');
     }
 
     if (doFetch) fetch('https://bosareituqlakbwqulig.supabase.co/rest/v1/users', {
