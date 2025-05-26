@@ -12,12 +12,12 @@ document.getElementById('auth-form').addEventListener('submit', function(event) 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    fetch('https://rkvpdspcctvbhbcxozgl.supabase.co/rest/v1/users', {
+    fetch('https://bosareituqlakbwqulig.supabase.co/rest/v1/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJrdnBkc3BjY3R2YmhiY3hvemdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc4NTgzNDQsImV4cCI6MjA2MzQzNDM0NH0.zNXHuu1N6THMfihsnv0EduI36qJJ4oQ7pNbnAN8e8Bs',                 
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJrdnBkc3BjY3R2YmhiY3hvemdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc4NTgzNDQsImV4cCI6MjA2MzQzNDM0NH0.zNXHuu1N6THMfihsnv0EduI36qJJ4oQ7pNbnAN8e8Bs'
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJvc2FyZWl0dXFsYWtid3F1bGlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyNTkzOTksImV4cCI6MjA2MzgzNTM5OX0.u3eZs1XYGJAFThrDBGeDziVIYcua1bQaUMoTMjl7TSQ',                 
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJvc2FyZWl0dXFsYWtid3F1bGlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyNTkzOTksImV4cCI6MjA2MzgzNTM5OX0.u3eZs1XYGJAFThrDBGeDziVIYcua1bQaUMoTMjl7TSQ'
       },
       body: JSON.stringify({
         first_name,
