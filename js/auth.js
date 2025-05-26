@@ -12,24 +12,49 @@ document.getElementById('auth-form').addEventListener('submit', function(event) 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    fetch('https://bosareituqlakbwqulig.supabase.co/rest/v1/users', {
+    const payload = {
+      first_name,
+      last_name,
+      phone,
+      address,
+      email,
+      password
+    }
+
+    let doFetch = true
+    console.log(payload['email']);
+
+    for(prop in payload){
+      if(!payload[prop]){
+        doFetch = false;
+        alert('Обязательные поля должны быть заполнены!');
+        break;
+      }
+
+      if(prop === 'email' && !String(payload[prop])
+        .toLowerCase()
+        .match(
+          /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        )
+      ){
+        doFetch = false;
+        alert('Электронная почта введена некорректно');
+        break;
+      }
+    }
+
+    if (doFetch) fetch('https://bosareituqlakbwqulig.supabase.co/rest/v1/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJvc2FyZWl0dXFsYWtid3F1bGlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyNTkzOTksImV4cCI6MjA2MzgzNTM5OX0.u3eZs1XYGJAFThrDBGeDziVIYcua1bQaUMoTMjl7TSQ',                 
         'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJvc2FyZWl0dXFsYWtid3F1bGlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyNTkzOTksImV4cCI6MjA2MzgzNTM5OX0.u3eZs1XYGJAFThrDBGeDziVIYcua1bQaUMoTMjl7TSQ'
       },
-      body: JSON.stringify({
-        first_name,
-        last_name,
-        phone,
-        address,
-        email,
-        password
-      })
+      body: JSON.stringify(payload)
     })
     .then(response => {
       if (!response.ok) throw new Error("Помилка: " + response.status);
+      document.getElementById('loader').style.display = 'flex';
       document.location.href = 'https://gorod-novoross.ru/'
     })
     .catch(error => {
