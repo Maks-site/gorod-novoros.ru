@@ -1,0 +1,210 @@
+@charset "windows-1251";
+/* CSS Document */
+
+/**
+ * 	Форма добавления 
+ */
+.decorated-form{
+	padding: 5px 10px 10px 10px;
+}
+.decorated-form fieldset{
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+.decorated-form label{
+	display: block;
+	margin-bottom: 7px;
+}
+
+
+.decorated-form label.field2 input, .decorated-form label.field2 textarea, .decorated-form label.field2 select{
+	display: block;
+	width: 90px;
+	height: 30px;
+	padding: 1px 7px 1px 7px;
+	border: none;
+	
+	background: #FFFFFF;
+	box-shadow: inset 0 1px 3px #a1a9b0, 0 1px 0 #FFFFFF;
+	border-radius: 3px;
+	font-size: 15px;
+	color: #2a2f35;
+}
+
+
+
+
+.decorated-form label.field input, .decorated-form label.field textarea, .decorated-form label.field select{
+	display: block;
+	width: 97%;
+	height: 28px;
+	padding: 1px 7px 1px 7px;
+	border: none;
+	
+	background: #FFFFFF;
+	box-shadow: inset 0 1px 3px #a1a9b0, 0 1px 0 #FFFFFF;
+	border-radius: 3px;
+	font-size: 15px;
+	color: #2a2f35;
+}
+.decorated-form label.field input:focus, .decorated-form label.field textarea:focus, .decorated-form label.field select:focus{
+	box-shadow: inset 0 1px 3px #a1a9b0, 0 0 3px #2b2b2b;
+}
+.decorated-form label.field textarea{
+	height: 50px;
+}
+.decorated-form label.field select{
+	width: 97%;
+	padding-top: 4px;
+	height: 26px;
+}
+.decorated-form label.field span{
+	display: block;
+	font-size: 14px;
+	color: #293036;
+	margin-bottom: 2px;
+}
+.decorated-form label.field span em{
+	color: #ff6000;
+}
+.decorated-form label.field span.hint{
+	display: block;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 12px;
+	margin: 2px 0 0 0;
+	color: #9099a4;
+}
+.decorated-form label.field.error span.hint{
+	color: #f33434;
+}
+.decorated-form label ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.decorated-form label ul li{
+	font-size: 12px;
+	line-height: 12px;
+	color: #f33434;
+	font-weight: normal;
+	margin: 2px 0 0 0;
+}
+.decorated-form label.field.error input, .decorated-form label.field.error textarea, .decorated-form label.field.error select{
+	box-shadow: inset 0 1px 3px #a1a9b0, 0 0 3px #ff0000;
+	border: 1px solid #ff0000;
+}
+.decorated-form .gray-button, .decorated-form .orange-button{
+	width: 320px;
+}
+
+
+
+
+/**
+ * 	Яндекс-карта
+ */
+#map-shadow, .map-shadow{
+	background: url('img/map-shadow.png') bottom center no-repeat;
+	padding: 20px 0 20px 0;
+}
+#map-container, .map-container{
+	border-radius: 9px;
+	border: 1px solid #cdd2d5;
+	box-shadow: inset 0 1px 1px #FFFFFF;
+	padding: 9px;
+	
+	background: rgb(230,234,236); /* Old browsers */
+	/*
+	background: -moz-linear-gradient(top,  rgba(230,234,236,1) 0%, rgba(218,224,227,1) 100%); /
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(230,234,236,1)), color-stop(100%,rgba(218,224,227,1))); 
+	background: -webkit-linear-gradient(top,  rgba(230,234,236,1) 0%,rgba(218,224,227,1) 100%); 
+	background: -o-linear-gradient(top,  rgba(230,234,236,1) 0%,rgba(218,224,227,1) 100%); 
+	background: -ms-linear-gradient(top,  rgba(230,234,236,1) 0%,rgba(218,224,227,1) 100%); 
+	background: linear-gradient(to bottom,  rgba(230,234,236,1) 0%,rgba(218,224,227,1) 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6eaec', endColorstr='#dae0e3',GradientType=0 ); 
+	*/
+}
+#map{
+	border: 1px solid #cdd2d5;
+	box-shadow: inset 0 1px 1px #CCCCCC;
+	height: 480px;
+}
+
+
+
+/**
+ * 	Стили кнопок
+ */
+
+.orange-button{
+	display: block;
+	height: 34px;
+	padding: 0 15px;
+	
+	border: 1px solid #0c558a;
+	border-radius: 3px;
+	box-shadow: inset 0px 0px 1px white, 0px 1px 2px #0c558a;
+	background: #1678b2; /* Old browsers */
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-shadow: -1px -1px 0px #953600;
+	
+	cursor: pointer;
+}
+.orange-button:hover{
+	background: #0c558a; /* Old browsers */
+}
+.orange-button:active{
+	border: 1px solid #527397;
+	text-shadow: -1px -1px 0 #953600;
+	background: #527397; /* Old browsers */
+
+
+}
+
+.gray-button{
+	display: block;
+	height: 34px;
+	padding: 0 15px;
+	
+	border: 1px solid #cfd4d8;
+	border-radius: 3px;
+	box-shadow: inset 0px 0px 1px white, 0px 1px 2px #a6afb3;
+	
+	background: rgb(250,250,250); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(250,250,250,1) 0%, rgba(239,241,242,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(250,250,250,1)), color-stop(100%,rgba(239,241,242,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(250,250,250,1) 0%,rgba(239,241,242,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(250,250,250,1) 0%,rgba(239,241,242,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(250,250,250,1) 0%,rgba(239,241,242,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(250,250,250,1) 0%,rgba(239,241,242,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#eff1f2',GradientType=0 ); /* IE6-9 */
+
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #c1c6ca;
+	text-shadow: -1px -1px 0px #999c9f;
+	
+	cursor: pointer;
+}
+.gray-button:hover{
+	background: rgb(242,242,242); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(242,242,242,1) 0%, rgba(246,246,246,1) 24%, rgba(234,237,239,1) 59%, rgba(240,243,245,1) 90%, rgba(205,212,217,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,242,242,1)), color-stop(24%,rgba(246,246,246,1)), color-stop(59%,rgba(234,237,239,1)), color-stop(90%,rgba(240,243,245,1)), color-stop(100%,rgba(205,212,217,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(242,242,242,1) 0%,rgba(246,246,246,1) 24%,rgba(234,237,239,1) 59%,rgba(240,243,245,1) 90%,rgba(205,212,217,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(242,242,242,1) 0%,rgba(246,246,246,1) 24%,rgba(234,237,239,1) 59%,rgba(240,243,245,1) 90%,rgba(205,212,217,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(242,242,242,1) 0%,rgba(246,246,246,1) 24%,rgba(234,237,239,1) 59%,rgba(240,243,245,1) 90%,rgba(205,212,217,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(242,242,242,1) 0%,rgba(246,246,246,1) 24%,rgba(234,237,239,1) 59%,rgba(240,243,245,1) 90%,rgba(205,212,217,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#cdd4d9',GradientType=0 ); /* IE6-9 */
+}
+.gray-button:active{
+	border: 1px solid #e9eff3;
+	box-shadow: inset 0 4px 4px #969da1;
+	background: #eaedef;
+}
+

@@ -1,0 +1,256 @@
+body {
+    position: relative;
+}
+
+.modal {
+    position: fixed; 
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .9);
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.wrapper {
+    background-color: #1678b2;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register {
+    padding: 10px;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: tahoma,arial,verdana,sans-serif,Lucida Sans;
+    font-size: 15px;
+    color: red;
+}
+
+.register .message {
+    text-shadow: 1px 1px 2px white;
+}
+
+.register a {
+    display: block;
+    margin-top: 20px;
+    color: white;
+}
+
+#auth {
+    width: 100vw;
+    background: none;
+    display: flex;
+    justify-content: center;
+}
+
+#auth-form {
+    margin-top: 300px;
+    background: none;
+    padding: 20px;
+}
+
+#auth-form .field {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+#auth-form .field input{
+    width: 700px;
+}
+
+#auth-form.auth .field label::after{
+    content: " *";
+    color: red;
+}
+
+#mainmenu {
+position: relative;
+background: #1678b2;
+height: 40px;
+margin: 0px;
+margin-top: 2px;
+padding: 0;
+float: left;
+width: 100%;
+z-index: 10;
+
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-o-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+#mainmenu ul {
+clear: left;
+position: relative;
+right: 50%;
+height: 40px;
+float: right;
+text-align: center;
+font: 1.2rem Tahoma;
+font-weight:500;
+list-style: none;
+padding: 0;
+margin: 0
+}
+
+
+
+/** Основные пункты **/
+#mainmenu > ul > li {
+position: relative;
+left: 50%;
+float: left;
+height: 40px;
+padding: 0;
+margin: 0
+}
+
+#mainmenu > ul > li > a {
+border-left: 1px solid #FFFFFF;;
+display: block;
+color: #fff;
+text-decoration: none;
+padding: 0 7px;
+line-height: 40px;
+}
+
+#mainmenu > ul > li:first-child > a {
+border: none
+}
+
+#mainmenu > ul > li:hover > a, #mainmenu > ul > li.hover > a, #mainmenu > ul > li.active > a {
+color: #fff
+}
+
+#mainmenu > ul > li:hover, #mainmenu > ul > li.hover, #mainmenu > ul > li.active {
+background: #0c558a;
+}
+
+/* Выпадающие подпункты */
+#mainmenu ul li ul {
+position: absolute;
+left: 0;
+top: 40px;
+display: none;
+list-style: none;
+visibility: hidden;
+padding: 0;
+margin: 0;
+width: 200px
+}
+#mainmenu > ul > li ul li {
+background-color: #1678b2;
+position: relative;
+left: 0;
+display: list-item;
+float: none;
+height: auto;
+margin: 0;
+text-align: left;
+}
+#mainmenu ul li ul li a {
+border-bottom: 1px solid #999;
+display: block;
+color: #fff;
+padding: 10px 15px;
+text-decoration: none;
+}
+#mainmenu ul li ul li.parent a {
+position: relative;
+}
+#mainmenu ul li ul > li.parent > a::before {
+border-top: 1px solid #fff;
+border-right: 1px solid #fff;
+content: "";
+display: block;
+position: absolute;
+right: 15px;
+top: 50%;
+transform: translateY(-50%) rotate(45deg);
+height: 6px;
+width: 6px;
+}
+#mainmenu ul li ul li:hover, #mainmenu ul li ul li.hover {
+background-color: #0c558a;
+}
+#mainmenu ul li:hover ul, #mainmenu ul li.hover ul {
+display: block
+}
+
+/* Выпадающие пункты второго уровня */
+#mainmenu ul li:hover > ul {
+opacity: 1;
+visibility: visible;
+margin: 0;
+}
+#mainmenu ul li ul li ul {
+top: 0;
+left: 200px;
+margin: 0 0 0 20px;
+width: 240px
+}
+
+
+
+
+
+
+#side_bar {
+    background: none repeat scroll 0% 0% #FFF;
+    border-bottom-left-radius: 5px;
+    padding: 5px 0px 10px 4px;
+    width: 172px;
+}
+.fl_l {
+    float: left;
+}
+
+
+#side_bar ol {
+    list-style: outside none none;
+    margin: 0px 0px 1px;
+    padding: 0px;
+
+}
+
+#side_bar ol li {
+    font-size: 1em;
+	padding:1px;
+	background-color:#f4f9ff;
+}
+
+#side_bar ol li a {
+    color: #2B587A;
+    text-decoration: none;
+    cursor: pointer;
+	padding:2px;
+	font-family: Tahoma;
+    font-size:1.1rem;
+	font-weight:500;
+	display: block;
+	border:1px solid #aeccee;
+
+	
+}
+
+#side_bar ol li a:hover {
+    color: #2B587A;
+    text-decoration: none;
+    cursor: pointer;
+	color: #FFFFFF;
+	background-color:#1678b2;
+;
+}
+
+
