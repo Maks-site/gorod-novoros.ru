@@ -30,11 +30,7 @@ document.getElementById('auth-form').addEventListener('submit', function(event) 
     })
     .then(response => {
       if (!response.ok) throw new Error("Помилка: " + response.status);
-      return response.json();
-    })
-    .then(data => {
-      alert('Успішно додано!');
-      console.log(data);
+      document.location.href = 'https://gorod-novoross.ru/'
     })
     .catch(error => {
       document.getElementById('result').textContent = 'Помилка: ' + error.message;
